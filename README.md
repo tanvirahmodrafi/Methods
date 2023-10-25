@@ -1,0 +1,2 @@
+# Methods
+ Some important methods 
