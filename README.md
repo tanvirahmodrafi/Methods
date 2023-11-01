@@ -1,2 +1,3 @@
 # Methods
- Some important methods 
+ Some important methods for bigginers
+ 
