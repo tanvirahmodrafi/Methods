@@ -44,7 +44,7 @@ int main(void)
 
     int arraySize = (sizeof(array) / sizeof(array[0]));
 
-    sort(array, arraySize + array);
+    sort(array, array + arraySize);
 
     cout << "Enter the keys to be searched array" << '\n';
     cin >> key;
