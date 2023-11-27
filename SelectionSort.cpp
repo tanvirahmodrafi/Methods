@@ -18,7 +18,7 @@ int main()
 
 	for (int i = 0; i < n - 1; i++)//{1,4,5,8} just taking 1 to 5;
 	{
-		for (int j = i + 1; j < n; j++)//{1,4,5,8} compareingwith 4 to 8
+		for (int j = i + 1; j < n; j++)//{1,4,5,8} compareing with 4 to 8
 		{
 			if (arr[i] >= arr[j])
 			{

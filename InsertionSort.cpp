@@ -19,10 +19,10 @@ int main()
     {
         int current = arr[i]; // storing the value to compare;
         int j = i - 1;
-        while (arr[j] > current && j >= 0)
+        while (j >= 0 && arr[j] > current)
         {
-            arr[j + 1] = arr[j]; // moving the elements to put arr[j] in right plce;
-            j--;                 // moves left side of the array;
+            arr[j + 1] = arr[j];
+            j--;
         }
         arr[j + 1] = current; // putting the elements in right place;
     }
