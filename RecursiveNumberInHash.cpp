@@ -14,6 +14,5 @@ int main() {
             seenValues.insert(input[i]);
         }
     }
-
     return 0;
 }
