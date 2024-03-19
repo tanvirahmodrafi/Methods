@@ -1,50 +1,52 @@
 #include <iostream>
 using namespace std;
 
-
-void conquer(int arr[], int si, int mid, int ei) {
-    int *merged = new int[ei - si + 1];
-    int i = si, j = mid + 1, k = 0;
-
-    while (i <= mid && j <= ei) {
-        if (arr[i] <= arr[j]) {
-            merged[k++] = arr[i++];
-        } else {
-            merged[k++] = arr[j++];
+void concuer(int arr[],int s,int mid,int e){
+    int *merg = new int[e-s+1];
+    int i = s, j= mid+1, k = 0;
+    while(i<=mid && j<= e){
+        if(arr[i] >= arr[j] ){
+            merg[k] = arr[j];
+            k++,j++;
+        }else{
+            merg[k] = arr[i];
+            k++,i++;
         }
     }
-
-    while (i <= mid) {
-        merged[k++] = arr[i++];
+    while(i <= mid){
+        merg[k] = arr[i];
+        k++,i++;
+    }
+    while(j<= e){
+        merg[k] = arr[j];
+        k++,j++;
     }
 
-    while (j <= ei) {
-        merged[k++] = arr[j++];
+    for (int i = s,j = 0; i <= e; i++,j++)
+    {
+        arr[i] = merg[j];
     }
-
-    for (int i = si, j = 0; i <= ei; i++, j++) {
-        arr[i] = merged[j];
-    }
-
 }
-void merge(int arr[], int s, int e) {
-    if (e >= s) {
+
+void divide(int arr[], int s, int e)
+{
+    if (e > s)
+    {
         int mid = s + (e - s) / 2;
-        merge(arr, s, mid);
-        merge(arr, mid + 1, e);
-        conquer(arr, s, mid, e);
+        divide(arr, s, mid);
+        divide(arr, mid + 1, e);
+        concuer(arr,s,mid,e);
     }
 }
 
-int main() {
-    int arr[] = {7,3,2,16,24,4,11,9};
-    merge(arr,0,7);
+int main()
+{
+    int arr[] = {7, 3, 2, 16, 24, 4, 11, 9};
+    divide(arr, 0, 7);
     for (int i = 0; i < 8; i++)
     {
-        cout<<arr[i]<<' ';
+        cout << arr[i] << ' ';
     }
-    
 
     return 0;
 }
-
