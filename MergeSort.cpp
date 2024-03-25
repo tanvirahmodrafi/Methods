@@ -21,17 +21,12 @@ void concuer(int arr[],int s,int mid,int e){
         merg[k] = arr[j];
         k++,j++;
     }
-
-    for (int i = s,j = 0; i <= e; i++,j++)
-    {
-        arr[i] = merg[j];
-    }
+    for (int i = s,j = 0; i <= e; i++,j++){
+        arr[i] = merg[j];}
 }
-
 void divide(int arr[], int s, int e)
 {
-    if (e > s)
-    {
+    if (e > s){
         int mid = s + (e - s) / 2;
         divide(arr, s, mid);
         divide(arr, mid + 1, e);
