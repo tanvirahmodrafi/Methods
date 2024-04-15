@@ -36,12 +36,20 @@ void divide(int arr[], int s, int e)
 
 int main()
 {
-    int arr[] = {7, 3, 2, 16, 24, 4, 11, 9};
-    divide(arr, 0, 7);
-    for (int i = 0; i < 8; i++)
+    int n;
+    cout<<"Enter the number of array"<<endl;
+    cin >> n;
+    int arr[n];
+    cout<<"Enter elements for the array"<<'\n';
+    for (int i = 0; i < n; i++)
     {
-        cout << arr[i] << ' ';
+        cin>>arr[i];
     }
-
+    divide(arr, 0, n-1);
+    cout<<"Your sorted array, using merge sort is "<<endl;
+    for (int i = 0; i < n; i++)
+    {
+        cout<<arr[i]<<' ';
+    }
     return 0;
 }
