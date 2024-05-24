@@ -1,5 +1,4 @@
-#include <iostream>
-#include <cmath>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -35,3 +34,9 @@ int main()
 	}
 	return 0;
 }
+
+//      4, 6, 1, 3, 7
+
+//      1, 6, 4, 3, 7
+
+//      1, 3, 4, 6, 7
