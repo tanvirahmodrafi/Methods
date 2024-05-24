@@ -13,7 +13,6 @@ int partition(int arr[], int low, int high) {
     swap(arr[i], arr[high]);
     return i;
 }
-
 void quicksort(int arr[],int low,int high){
     if(low<high){
         int pivot = partition(arr,low,high);
