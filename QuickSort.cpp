@@ -20,6 +20,7 @@ void quicksort(int arr[],int low,int high){
         quicksort(arr,pivot+1,high);
     }
 }
+
 int main(){
     int n;
     cout<<"Enter the number of array"<<endl;
